@@ -4,13 +4,16 @@
 #include <string>
 #include <regex>
 
-#define Identifier 0;
-#define Number 0;
+#define Identifier "Identifier";
+#define Number "Number";
+#define Operator "Operator";
 
 struct Token
 {
-    size_t type;
+    std::string type;
     std::string value;
+
+    std::string tostring();
 };
 
 class Tknst
@@ -20,13 +23,22 @@ public:
 
     bool isidentstart(char ch);
     bool isident(char ch);
+    bool isoperator(char ch);
+    bool iswhitespace(char ch);
 
     Token *readnext();
+    Token *next();
+    Token *peek();
+    bool eof();
+
+    void skipwhitespaces();
     void readnumber(Token *t);
     void readident(Token *t);
+    void readoperator(Token *t);
 
 private:
     Inst _inst;
+    Token *current = nullptr;
 };
 
 #endif
