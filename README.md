@@ -3,7 +3,12 @@
 a simple Tokenstream written in C++
 
 # usage
-this is not a library so, there's nothing desired for build.
-just clone or download this repository
-then run if you're using MinGW, msys2 or whatever gcc compiler.
-```g++ main.cpp Inst.cpp Tknst.cpp -o main```
+clone or download this repository  
+then run if you're using MinGW, msys2 or whatever c++ compiler.  
+```
+g++ -c Inst.cpp Tknst.cpp  
+g++ -shared -o tokenstream.dll Inst.o Tknst.o  
+g++ -o main.exe main.cpp tokenstream.dll
+main.exe  
+
+```
