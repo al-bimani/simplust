@@ -24,4 +24,4 @@ or just copy the files where you execute
 your code i.e. visual studio, codeblocks, Clion...  
 
 feel free to submit an issue or PR include your ideas or fix mistakes if found  
-or even submit a future request. 
+or even submit a feature request. 
